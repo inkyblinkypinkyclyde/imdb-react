@@ -4,13 +4,18 @@ import Release from './release'
 const UpcomingReleases = ({ releases }) => {
     const releaseNodes = releases.map((release) => {
         return (
-            <Release key={release.id} name={release.name} url={release.url} />
+            <li>
+                <Release key={release.id} name={release.name} url={release.url} />
+            </li>
         )
     })
 
     return (
         <>
-            {releaseNodes}
+            <h1>Upcoming Releases UK</h1>
+            <ul>
+                {releaseNodes}
+            </ul>
         </>
     )
 }
